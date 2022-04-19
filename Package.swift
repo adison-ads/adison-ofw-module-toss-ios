@@ -9,13 +9,16 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "TossOfwModule",
-            targets: ["TossOfwModule"]),
+            targets: ["TossOfwModule", "TossOfwModuleTarget"]
+        ),
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
-        // .package(url: /* package url */, from: "1.0.0"),
-        .package(url: "https://github.com/adison-ads/adison-offerwall-ios-sdk", .branch("main"))
-
+        .package(
+            name: "AdisonOfferwallSDK",
+            url: "https://github.com/adison-ads/adison-offerwall-ios-sdk",
+            .branch("main")
+        ),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
@@ -23,6 +26,12 @@ let package = Package(
         .binaryTarget(
             name: "TossOfwModule",
             url: "https://github.com/adison-ads/adison-ofw-module-toss-ios/releases/download/v1.2.8/TossOfwModule.zip",
-            checksum: "ab44d4edaa537151202ea902590d34b781dc5c8e11dcd25a7205e9231f1b5b90")
+            checksum: "ab44d4edaa537151202ea902590d34b781dc5c8e11dcd25a7205e9231f1b5b90"
+        ),
+        .target(
+            name: "TossOfwModuleTarget",
+            dependencies: ["AdisonOfferwallSDK"],
+            path: "Sources"
+        ),
     ]
 )

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AdisonOfferwallSDK",
+        "repositoryURL": "https://github.com/adison-ads/adison-offerwall-ios-sdk",
+        "state": {
+          "branch": "main",
+          "revision": "d2d8cc050894a5ac7642c630fa926bd26e4be47f",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
