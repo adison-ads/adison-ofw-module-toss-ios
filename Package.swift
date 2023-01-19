@@ -25,8 +25,8 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .binaryTarget(
             name: "TossOfwModule",
-            url: "https://github.com/adison-ads/adison-ofw-module-toss-ios/releases/download/1.2.10/TossOfwModule.zip",
-            checksum: "164ba6f1af215ca9d034382bdb662517bf2598a23b67869251a583ac4d015ddb"
+            url: "https://github.com/adison-ads/adison-ofw-module-toss-ios/releases/download/1.2.14/TossOfwModule.zip",
+            checksum: "740f8fd1abb77273dfa482a3d6580a0a88cbe5d277e00cb17c674da68c794a8a"
         ),
         .target(
             name: "TossOfwModuleTarget",
